@@ -21,7 +21,7 @@ PowerLaw:                 使用PowerLaw實作影像增強 -> [Link](https://git
 <br>
 HistogramProcessing:      使用直方圖均等化實作影像增強 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/ImageEnhancement/HistogramProcessing)
 <br>
-SmoothingLinearFilters:   動態偵測 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/SmoothingLinearFilters)
+SmoothingLinearFilters:   應用於動態偵測 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/SmoothingLinearFilters)
 <br>
 FiltersDemo:              多種Filters效果比較 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/Filters/FiltersDemo)
 <br>
