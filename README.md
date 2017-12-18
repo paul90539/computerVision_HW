@@ -1,7 +1,16 @@
 # computerVision_HW
 
-Collect my computerVision homework.
-<br>
+## 前言
+這裡收集我電腦視覺的所有作業，這堂課主要使用OpenCV來學習有電腦視覺有關的知識。
+
+## Environment
+
+OS: Windows 10
+IDE: Microsoft 2015
+OpenCV: 2.4.13
+
+## Homework Title
+
 OpenCameraPractice:       開啟攝影機及圖片儲存與影片錄製 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/OpenCameraPractice)
 <br>
 Mosaic:                   影像馬賽克運算 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/Mosaic)
