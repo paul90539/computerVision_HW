@@ -23,7 +23,7 @@ HistogramProcessing:      使用直方圖均等化實作影像增強 -> [Link](h
 <br>
 SmoothingLinearFilters:   動態偵測 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/SmoothingLinearFilters)
 <br>
-FiltersDemo:              多種Filters效果比較 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/https://github.com/paul90539/computerVision_HW/tree/master/Filters/FiltersDemo)
+FiltersDemo:              多種Filters效果比較 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/Filters/FiltersDemo)
 <br>
 LaplacianEnhance:         Laplacian影像增強方式 -> [Link](https://github.com/paul90539/computerVision_HW/tree/master/Filters/LaplacianEnhance)
 <br>
