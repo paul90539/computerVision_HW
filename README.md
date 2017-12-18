@@ -5,9 +5,9 @@
 
 ## Environment
 
-OS: Windows 10
-IDE: Microsoft 2015
-OpenCV: 2.4.13
+OS: Windows 10<br>
+IDE: Microsoft 2015<br>
+OpenCV: 2.4.13<br>
 
 ## Homework Title
 
