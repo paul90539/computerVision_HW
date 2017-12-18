@@ -6,7 +6,7 @@
 ## Environment
 
 OS: Windows 10<br>
-IDE: Microsoft 2015<br>
+IDE: Visual Studio 2015<br>
 OpenCV: 2.4.13<br>
 
 ## Homework Title
