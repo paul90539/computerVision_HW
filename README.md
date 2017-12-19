@@ -1,6 +1,6 @@
 # computerVision_HW
 
-## 前言
+## 說明
 這裡收集我電腦視覺的所有作業，這堂課主要使用OpenCV來學習有電腦視覺有關的知識。
 
 ## Environment
