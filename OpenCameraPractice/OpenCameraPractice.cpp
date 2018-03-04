@@ -1,4 +1,4 @@
-#include "opencv2/highgui/highgui.hpp"
+#include <opencv2/opencv.hpp>
 #include <iostream>
 #include <windows.h>
 
@@ -7,7 +7,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	VideoCapture cap("C:/Users/Administrator/videoForCV/sample.mp4"); //open the video camera no. 0 #### or open the video in the address
+	VideoCapture cap(0); //open the video camera no. 0 #### or open the video in the address
 	char name[100];	//saved the files or video name
 	int mode = 0; //to check video recording or not
 	SYSTEMTIME stLocal;	//get systemtime
@@ -30,9 +30,8 @@ int main(int argc, char* argv[])
 
 	namedWindow("MyVideo", CV_WINDOW_AUTOSIZE); //create a window called "MyVideo"
 
-	double fps = cap.get(CV_CAP_PROP_FPS); //get video fps
-	cout << "fps:" << fps << endl;
-	fps = fps > 30 ? 30 : fps;
+	double delayTime = 30; //set videoCap delayTime
+	//fps = cap.get(CV_CAP_PROP_FPS);  //get video fps
 
 	while (1)
 	{
@@ -40,7 +39,7 @@ int main(int argc, char* argv[])
 
 		bool bSuccess = cap.read(frame); // read a new frame from video
 		int intcom; // listener command
-		intcom = waitKey( (int) fps ); // get command and set waiting time(ms) 
+		intcom = waitKey((int)delayTime); // get command and set waiting time(ms) 
 		if (!bSuccess) //if not success, break loop
 		{
 			cout << "Cannot read a frame from video stream" << endl;
@@ -58,26 +57,24 @@ int main(int argc, char* argv[])
 
 		if (intcom == 'z') //wait for 'z' key press for 30ms. This function is save picture.
 		{
-
 			GetLocalTime(&stLocal);
-			sprintf(name, "%d_%d_%d_%d_%d_%d.jpg", stLocal.wYear, stLocal.wMonth, //set name
+			sprintf_s(name, "%d_%d_%d_%d_%d_%d.jpg", stLocal.wYear, stLocal.wMonth, //set name
 				stLocal.wDay, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
 			printf("%s\n", name);
 			imwrite(name, frame);	//picture save
-
 		}
-		if (intcom == 'a' && mode == 0){ //wait for 'a' key press for 30ms. This function is start record video.
+		if (intcom == 'a' && mode == 0) { //wait for 'a' key press for 30ms. This function is start record video.
 			mode = 1;
 			GetLocalTime(&stLocal);
-			sprintf(name, "%d_%d_%d_%d_%d_%d.avi", stLocal.wYear, stLocal.wMonth, //set name
+			sprintf_s(name, "%d_%d_%d_%d_%d_%d.avi", stLocal.wYear, stLocal.wMonth, //set name
 				stLocal.wDay, stLocal.wHour, stLocal.wMinute, stLocal.wSecond);
 			printf("%s\n", name);
 			writer.open(name, CV_FOURCC('M', 'J', 'P', 'G'), 30, videoSize); //start recording to video
 		}
-		if (mode == 1){ //This function is recording loop.
+		if (mode == 1) { //This function is recording loop.
 			writer.write(frame); //video recording loop
 		}
-		if (intcom == 's'){ //wait for 's' key press for 30ms. This function is end record video.
+		if (intcom == 's') { //wait for 's' key press for 30ms. This function is end record video.
 			writer.release(); //end recording to video
 			mode = 0;
 		}
