@@ -13,7 +13,7 @@ Mat star;
 vector< Point2f > pointarray(10);
 
 void onMouse(int Event, int x, int y, int flags, void* param);
-void trans();
+void PerspectiveTransform();
 
 int main(int argc, char* argv[])
 {
